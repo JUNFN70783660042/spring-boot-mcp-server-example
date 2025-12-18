@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: bi-chatter
+  ai:
+    mcp:
+      server:
+        type: SYNC  # or ASYNC
+        annotation-scanner:
+          enabled: true
+        name: bi-chat-mcp
+        protocol: STREAMABLE
+        streamable-http:
+          mcp-endpoint: /mcp
+  profiles:
+    active: dev
+server:
+  port: 8088
+  servlet:
+    context-path: /
